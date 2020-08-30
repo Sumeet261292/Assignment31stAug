@@ -1,0 +1,25 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div style="font-family:Brush Script MT, Brush Script Std, cursive;font-size: 30px;color: green;">
+            MyCart... </div>      
+
+        <ul class="navbar-nav">
+            <li><a *ngIf='hardcodedAuthenticationService.isAdminLoggedIn()' routerLink="/welcome/admin" class="nav-link">Home</a></li>
+            <li><a *ngIf='hardcodedAuthenticationService.isAdminLoggedIn()' routerLink="/todos" class="nav-link">Manage</a></li>
+            <li><a *ngIf='hardcodedAuthenticationService.isCustomerLoggedIn()' routerLink="/welcome/customer" class="nav-link">Home</a></li>
+            <li><a *ngIf='hardcodedAuthenticationService.isCustomerLoggedIn()' routerLink="/products" class="nav-link">Products</a></li>                        
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf='!hardcodedAuthenticationService.isAdminLoggedIn() && 
+                !hardcodedAuthenticationService.isCustomerLoggedIn()'routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf='hardcodedAuthenticationService.isAdminLoggedIn()' routerLink="/logout" class="nav-link">Logout</a></li>  
+            <li><a *ngIf='hardcodedAuthenticationService.isCustomerLoggedIn()' routerLink="/logout" class="nav-link">Logout</a></li>          
+        </ul>
+        
+    </nav>
+
+</header>
+
+
+

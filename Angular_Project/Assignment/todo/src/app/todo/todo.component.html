@@ -1,0 +1,32 @@
+<h1 *ngIf='checkHeader()'>Add new product</h1>
+<h1 *ngIf='!checkHeader()'>Update product</h1>
+<div class='container'>
+
+    <fieldset class='form-group'>
+        <label>Catagory</label>
+        <input type='text' [(ngModel)]='todo.catagory' class='form-control' name='catagory' required='required'>
+    </fieldset>
+
+    <fieldset class='form-group'>
+        <label>Name</label>    
+        <input type='text' [(ngModel)]='todo.name' class='form-control' name='name' required='required'>
+    </fieldset>
+
+    <fieldset class='form-group'>
+        <label>Price</label>    
+        <input type='text' [(ngModel)]='todo.price' class='form-control' name='price' required='required'>
+    </fieldset>
+
+    <fieldset class='form-group'>
+        <label>Tax Percentage</label>    
+        <input type='text' [(ngModel)]='todo.tax' class='form-control' name='tax' required='required'>
+    </fieldset>
+
+    <fieldset class='form-group'>
+        <label>Image file name</label>    
+        <input type='text' [(ngModel)]='todo.url' class='form-control' name='url' required='required'>
+    </fieldset>
+
+    <button (click)='saveTodo()' class='btn btn-success'>Save</button>
+
+</div>

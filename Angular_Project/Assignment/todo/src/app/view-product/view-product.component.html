@@ -1,0 +1,52 @@
+<h1> Product Details </h1>
+
+<div class="container">
+    <div class="row">
+        <div class="column" style="margin-top: 20mm;margin-left: 20mm;">
+            <img src={{todo.url}} alt="" border="3" width="200px" height="200px">
+        </div>
+
+        <div class="column" style="margin-top: 10mm;margin-left: 20mm;">
+            <table class="table"> 
+                <thead>               
+                <tr>
+                    <th>Details</th>    
+                    <th></th>        
+                </tr>
+                </thead>
+                <tbody>            
+                        <tr>
+                            <td>Product Catagory</td>
+                            <td>{{todo.catagory}}</td>
+                        </tr>
+
+                        <tr>   
+                            <td>Product Name</td>
+                            <td>{{todo.name}}</td>
+                        </tr>
+
+                        <tr>   
+                            <td>Product Price</td>
+                            <td>{{todo.price}}</td>
+                        </tr>
+
+                        <tr>   
+                            <td>Tax Percentage</td>
+                            <td>{{todo.tax}}</td>
+                        </tr>   
+                        
+                        <tr>   
+                            <td>Total amount</td>
+                            <td>{{total}}</td>
+                        </tr>   
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <button (click)="addToCart(todo.id)" class="btn btn-success">Add to cart</button>
+    </div>
+
+</div>

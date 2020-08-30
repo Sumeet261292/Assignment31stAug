@@ -1,0 +1,19 @@
+<h2>Login as Admnistrator</h2>
+<div class="container">
+    
+    <div class="alert alert-warning" *ngIf = 'invalidLogin'>{{errorMsg}}</div>
+    
+    username: <input type = "text" name = "username" [(ngModel)] = "username"/>
+
+    password: <input type = "password" name = "password" [(ngModel)] = "password"/>
+
+    <button (click) = handleLogin() class="btn btn-success" style="margin-left:3mm;">login</button>
+    
+</div>
+<br><br>
+
+<h2>Login as Customer</h2>
+    <div class="container">  
+        <button (click) = handleCustomerLogin() class="btn btn-success">login</button>
+    </div>
+    

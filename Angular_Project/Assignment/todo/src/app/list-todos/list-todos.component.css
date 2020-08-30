@@ -1,0 +1,19 @@
+.topLeft {
+    position: absolute;
+    top: 70px;
+    left: 0;    
+}
+
+.topRight {
+    position: absolute;
+    top: 70px;
+    right: 0;    
+}
+
+.scroll{
+  align-items: center;
+  width: 900px;
+  height: 500px;  
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

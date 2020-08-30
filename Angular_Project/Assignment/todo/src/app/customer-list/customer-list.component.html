@@ -1,0 +1,53 @@
+<h1 style="text-align: center;"> Store </h1>
+
+<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
+
+<div class="topLeft" style="font-size: 14px;" >
+  Search by: <input type = "text" name = "productName" [(ngModel)] = "productName"/>
+    <span style="margin-left: 1mm;"> </span>
+  <button (click) = searchByProdName() class="btn btn-success btn-sm">name</button>
+    <span style="margin-left: 2mm;"> </span>
+  <input type = "text" name = "productCatagory" [(ngModel)] = "productCatagory"/>
+    <span style="margin-left: 1mm;"> </span>
+  <button (click) = searchByProdCatagory() class="btn btn-success btn-sm">catagory</button>
+</div>
+
+<div class="topRight" style="font-size: 14px;">
+  Filter by Price: 
+  <button (click) = filterByPriceAsc() class="btn btn-success btn-sm">Low-High</button>
+    <span style="margin-left: 2mm;"> </span>
+  <button (click) = filterByPriceDesc() class="btn btn-success btn-sm">High-Low</button>
+</div>
+
+<div class="scroll" style="margin-left: 100px;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Preview</th>
+        <th>Catagory</th>
+        <th>Name</th>
+        <th>Price</th>        
+        <th>Visit</th>
+        <th>Buy</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- for (Todo todo: todos) {  -->
+              <tr *ngFor="let todo of todos">
+                <td><img src={{todo.url}} alt="" border="3" width="50" height="50"></td>
+                <td>{{todo.catagory}}</td>
+                <td>{{todo.name}}</td>
+                <td>{{todo.price}}</td>                
+                <td><button (click)="viewProduct(todo.id)" class="btn btn-success">View</button></td>
+                <td><button (click)="addToCart(todo.id)" class="btn btn-warning">Add to cart</button></td>
+              </tr>
+      <!-- } -->
+    </tbody>
+
+  </table>
+
+  <!-- <div class="row">
+      <button (click)="addTodo()" class="btn btn-success">Add</button>
+  </div> -->
+
+</div>
